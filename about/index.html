@@ -1,6 +1,19 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EL3NLCKSF9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EL3NLCKSF9');
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href*="skool.com"]');
+    if (a) gtag('event', 'join_group_click', {link_url: a.href, link_text: (a.textContent||'').trim().slice(0,60), page_path: location.pathname});
+  });
+</script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About Chris Deloach | Profits Through Purpose</title>
